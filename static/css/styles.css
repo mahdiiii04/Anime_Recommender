@@ -1,0 +1,106 @@
+.body{
+    padding: 0;
+    margin: 0;
+    background-color: #D8D9DA;
+    
+}
+.title-container{
+    background-image: url(https://i.ibb.co/VJx4pz6/bg.png);
+    background-position: center;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rounded-container{
+    background-color: #D8D9DA;
+    border-radius: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+.title{
+    color: #61677A;
+    padding: 10px;
+    font-size: 50px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.selectpicker{    
+    background-color: #D8D9DA;
+    color: #61677A;
+    display: flex;
+    align-self: center;
+    justify-content: center; 
+}
+
+.select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rec_button {
+    display: inline-block;
+    margin-left: 80px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #272829;
+    color: #D8D9DA;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.rec_button:hover {
+    background-color: #61677A;
+    color: #FFF6E0;
+}
+
+
+.anime-container {
+    border: 5px solid #272829;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 30px;
+    overflow: auto;
+}
+
+.image-container {
+    float: left; 
+    margin-right: 10px; 
+    border-radius: 20px;
+}
+
+.info-container {
+    overflow: hidden;
+    
+}
+
+.text1{
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: #272829;
+    font-size: 50px;
+    text-align: center;
+}
+
+.text2{
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: #272829;
+    font-size: 32px;
+}
+
+.text3{
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: #272829;
+    font-size: 22px;
+    
+}
+
+.image{
+    border-radius: 20px;
+}
