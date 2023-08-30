@@ -44,4 +44,4 @@ def recommend_anime():
     return render_template('index.html', names=anime_names, recommended=recommended)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, host="0.0.0.0")
