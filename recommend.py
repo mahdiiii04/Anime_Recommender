@@ -3,6 +3,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+from collections import Counter
 
 
 file = open('anime_data.pickle', 'rb')
@@ -52,4 +53,20 @@ def new_rec(id, num):
         if len(rec_ids) >= num:
             break
     return rec_ids
+
+def multiple_rec(ids, num):
+    combined = []
+    for id in ids:
+        recommended = new_rec(id, 50)
+        for rec_id in recommended:
+            combined.append(rec_id)
+    id_counter = Counter(combined)
+    mci = id_counter.most_common()
+    for c in mci:
+        if c[0] in ids:
+            mci.remove(c)
+    rec = list(c[0] for c in mci[:num])
+    return rec
+    
+
 
