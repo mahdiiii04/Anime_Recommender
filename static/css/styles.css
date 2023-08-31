@@ -20,12 +20,16 @@
     padding: 20px;
     text-align: center;
 }
+.rounded-container:hover{
+    background-color: transparent;
+}
 
 .title{
     color: #61677A;
     padding: 10px;
     font-size: 50px;
     font-family: 'Fira Sans Condensed', sans-serif;
+    -webkit-text-stroke: 2px #272829;
 }
 
 .selectpicker{    
@@ -54,6 +58,8 @@
     color: #D8D9DA;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    width: 135px;
+    text-align: center;
 }
 
 .rec_button:hover {
@@ -104,3 +110,54 @@
 .image{
     border-radius: 20px;
 }
+
+.image_button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.image_button img{
+    height: 280px;
+    width: 180px;
+    border-radius: 20px;
+}
+
+.image_button :hover{
+    filter: brightness(60%);
+}
+
+.image-container {
+    position: relative;
+    display: inline-block; 
+    border-radius: 20px;
+  }
+  
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+.hover-text {
+    position: absolute;
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+    font-size: 14px;
+  }
+  
+.image-container:hover .hover-text {
+    opacity: 1; 
+  }
+  
