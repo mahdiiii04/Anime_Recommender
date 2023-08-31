@@ -11,17 +11,30 @@
 <body class="body">
     <div class="title-container">
         <div class="rounded-container">
-            <h1 class="title">Anime Recommendation System</h1>
+            <h1 class="title" id="title">Anime Recommendation System</h1>
         </div>
     </div>
     <br><br>    
     <div class="select">
         <select id="Anime_Dropdown" class="selectpicker" data-live-search="true">            
-            {% for name in names %}
-                <option value="{{ name }}" class="option">{{ name }}</option>
+            {% for anime in names %}
+                <option value="{{ anime.id }}" class="option">{{ anime.name }}</option>
             {% endfor %}
         </select>
+        <button id="add" class="rec_button">Add</button>
         <button id="rec" class="rec_button">Recommend</button>
+        <button id="clear" class="rec_button">Clear</button>
+    </div>
+    <br>
+    <div id="buttons">
+        {% for anime in chosen %}
+            <button  class="image_button" >
+                <div class="image-container">
+                    <img src="{{anime.image}}" id="{{anime.id}}" class="image">
+                    <div class="hover-text">Delete</div>
+                  </div>                  
+            </button>
+        {% endfor %}
     </div>
     <br><br>
     <div class="animes-container">
